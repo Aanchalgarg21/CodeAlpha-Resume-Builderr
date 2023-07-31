@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="file.css"/>
+</head>
+
+<body>
+
+<div class="container" id="cv-form">
+    <h1 class="text-center">Resume Generator</h1>
+
+    <div class="row">
+        
+        <div class="col-md-6">
+<h3>Personal Information</h3>
+<div class="form-group">
+    <label for="nameField">Your Name</label>
+    <input type="text" id="nameField" placeholder="Enter here" class="form-control"/>
+</div>
+
+<div class="form-group mt-2">
+    <label for="contactField">Your Contact</label>
+    <input type="text" id="contactField" placeholder="Enter here" class="form-control"/>
+</div>
+
+
+<div class="form-group mt-2">
+    <label for="addressField">Your Address</label>
+    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+</div>
+
+<p class="text-secondary my-3">Important Links</p>
+
+<div class="form-group mt-2">
+    <label for="fbField">Facebook</label>
+    <input type="text" id="fbField" placeholder="Enter here" class="form-control" ></textarea>
+</div>
+
+
+<div class="form-group mt-2">
+    <label for="instaField">Instagram</label>
+    <input type="text" id="instaField" placeholder="Enter here" class="form-control"/>
+</div>
+
+
+<div class="form-group mt-2">
+    <label for="linkedField">LinkedIn</label>
+    <input type="text" id="linkedField" placeholder="Enter here" class="form-control"/>
+</div>
+
+        </div>
+        
+        <div class="col-md-6">
+<h3>Professional Information</h3>
+
+<div class="form-group mt-2">
+    <label for="objectiveField">Objective</label>
+    <textarea  id="objectiveField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+</div>
+
+
+<div class="form-group mt-2" id="we">
+    <label for="">Work Experience</label>
+    <textarea placeholder="Enter here" class="form-control wefield" rows="3"></textarea>
+
+
+
+
+
+<div class="container text-center mt-2" id="weAddButton">
+    <button onclick="addNewWefield()" class="btn btn-primary btn-sm">Add</button>
+</div>
+</div>
+
+
+    
+<div class="form-group mt-2" id="aq">
+    <label for="">Academic Qualification </label>
+    <textarea  placeholder="Enter here" class="form-control aqfield"></textarea>
+
+        
+<div class="container text-center mt-2" id="aqaddbtn">
+    <button onclick="addNewAqfield()" class="btn btn-primary btn-sm">Add</button>
+</div>
+
+</div>
+
+<div class="form-group mt-2" id="ac">
+    <label for="">Achievements</label>
+    <textarea  placeholder="Enter here" class="form-control achievefield" rows="3"></textarea>
+
+
+    
+    <div class="container text-center mt-2" id="achieveaddbtn">
+        <button onclick="addNewAcfield()" class="btn btn-primary btn-sm">Add</button>
+    </div>
+
+
+        </div>
+        </div>
+
+    
+   <div class="container text-center mt-3">
+    <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+   </div>
+    
+
+
+    </div>
+    </div>
+
+<!-----------------------template---------------->
+
+<div class="container" id="template">
+
+    <div class="row">
+        <div class="col-md-4 text-center py-5 background">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXukZao_O4VE-CqwWJZiiE_Kq2yPwfWPDU5A&usqp=CAU"
+                class="image-fluid myimg">
+
+            <div class="container">
+                <p id="namet1">Aanchal Garg</p>
+                <p id="contactt">+916574433471, +917759836551</p>
+                <p id="addresst">kankhal Haridwar, Uttarakhand INDIA</p>
+                <hr />
+
+                <p>
+                    <a id= "fbt" href="#1">https://www.facebook.com/freeresume</a>
+                </p>
+                <p>
+                    <a id="instat" href="#1">https://www.instagram.com/freeresume</a>
+                </p>
+                
+                <p>
+                    <a id="linkedt" href="#1">https://www.linkedin.com/freeresume</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-md-8 py-5">
+
+            <h1  id="namet2" class="text-center" style="font-weight: 980">Aanchal Garg</h1>
+
+            <div class="card">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p id="objectivet">
+                        To get a job of web developer
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="wet">
+                        <li>
+                            amazon clone
+                        </li>
+                        <li>
+                            mini projects
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="aqt">
+                        <li>
+                            currently, BTECH
+                        </li>
+                        <li>
+                            12
+                        </li>
+                        <li>
+                            10
+
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Achievements</h3>
+                </div>
+                <div class="card-body">
+                    <ul id="achievet">
+                        <li>
+                            hackathon
+                        </li>
+                        <li>
+                            web development from IBM
+                        </li>
+                        <li>
+                            basic C course
+
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="container mt-3 text-center">
+                <button  onclick="printCV()" class="btn background">
+                    Print CV
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
